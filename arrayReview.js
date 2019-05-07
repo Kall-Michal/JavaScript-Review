@@ -3,7 +3,11 @@ var threeItems = [1,2,3];
 //alert the result of your function
 
   //code here
-
+  function last(arr){
+    let last = arr.slice(-1)[0]
+    alert(last);
+  }
+  last(threeItems);
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -11,10 +15,19 @@ var threeItems = [1,2,3];
 
 
 //Loop through evenArray removing all values that aren't even 
-var evenArray = [1,2,3,6,22,98,45,23,22,12];
+var evenArray = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 
-  //code here
+//code here
 
+let odds = [];
+
+for (let i = 0; i < evenArray.length; i++) {
+  if (evenArray[i] % 2 !== 0) {
+    odds.push(parseInt(evenArray[i]));
+  }
+}
+
+console.log(odds);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -24,11 +37,17 @@ var evenArray = [1,2,3,6,22,98,45,23,22,12];
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
+getRandomArbitrary();
+
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-  //code here
+function check(){
+  if(randomArray.includes(getRandomArbitrary())){
+    return alert(true);
+  }
+}
 
-
+check(getRandomArbitrary)
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
@@ -37,7 +56,8 @@ var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 var first = [1,2,3,4,5];
 var second;
 
-  //code here
+second = first.slice(0);
+second.push(6,7);
 
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
