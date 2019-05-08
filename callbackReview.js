@@ -1,5 +1,10 @@
 /* Declare and Define the functions here that will make the function calls below work properly */
 
+function first (par1,par2){
+  par2(par1[0]);
+};
+
+
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -12,6 +17,9 @@ first(names, function(firstName){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
+function last (par1,par2){
+  par2(par1[par1.length -1]);
+};
 
 
 
@@ -26,6 +34,7 @@ last(names, function(lastName){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 //have the contains function return a boolean value for if the name is in the array or not.
+
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
