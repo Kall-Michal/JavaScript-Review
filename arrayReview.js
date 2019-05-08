@@ -72,7 +72,7 @@ alert(second) //[1,2,3,4,5,6,7];
 var sentence = "Dev Mountain is the best"
 
   //code here
-
+  
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
