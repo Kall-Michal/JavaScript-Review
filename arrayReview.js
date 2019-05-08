@@ -4,8 +4,8 @@ var threeItems = [1,2,3];
 
   //code here
   function last(arr){
-    let last = arr.slice(-1)[0]
-    alert(last);
+    let lastItem = arr.slice(-1)[0];
+    alert(lastItem);
   }
   last(threeItems);
 
@@ -72,7 +72,13 @@ alert(second) //[1,2,3,4,5,6,7];
 var sentence = "Dev Mountain is the best"
 
   //code here
-  
+function longest(str) {
+  var longestWord = str.split(" ").reduce(function(longest, currentWord) {
+    return currentWord.length > longest.length ? currentWord : longest;
+  },"");
+  return longestWord 
+}
+longest(sentence);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -83,7 +89,15 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
   //code here
+  function capitalize(str) {
+    str = str.split(" ");
 
+    for (var i = 0, x = str.length; i < x; i++) {
+      str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+  }
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -92,3 +106,18 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+
+
+function vowelCounter(str) {
+  var vowelList = "aeiouAEIOU";
+  var vowelCount = 0;
+
+  for (var i = 0; i < str.length; i++) {
+    if (vowelList.indexOf(str[i]) !== -1) {
+      vowelCount += 1;
+    }
+  }
+  return vowelCount;
+}
+
+vowelCounter(theOdyssey)
