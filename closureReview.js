@@ -20,13 +20,17 @@ var callFriend = function(){
 /* 
 Write a function that accepts a function as it's first argument and returns a new function (which calls the original function that was passed in) that can only ever be executed once.
  */
+
 function once(fn) {
+
   return function(){
+
     fn();
+
   }
+  
 };
 
-let callBack = once();
 
 
 

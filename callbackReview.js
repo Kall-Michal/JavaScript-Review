@@ -46,6 +46,15 @@ contains('Colt', names, function(yes){
   }
 });
 
+function contains(name, names, check){
+  let isTrue = false;
+  if(names.indexOf(name) !== -1){
+    isTrue = true;
+  }
+  check(isTrue);
+  return isTrue;
+}
+
 
 
 
@@ -60,7 +69,13 @@ map(numbers, function(num){
   return num * 2; //returns an array of [2,4,6,8,10]
 });
 
-
+function map(numbers, fn) {
+  let newArr = numbers.slice(0, numbers.length);
+  for (let i = 0; i < newArr.length; i++) {
+    newArr[i] = fn(newArr[i]);
+  }
+  return newArr;
+};
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -73,6 +88,18 @@ uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
+function uniq(name, fn) {
+  let newArr = name.slice(0, name.length);
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr.indexOf(newArr[i]) !== i) {
+      newArr.splice(i, 1);
+      i--;
+    }
+  };
+  fn(newArr);
+  return newArr;
+}
+
 
 
 
@@ -81,11 +108,16 @@ uniq(names, function(uniqArr){
 
 
 
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
-each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+var names = ["Tyler", "Cahlan", "Ryan", "Colt", "Tyler", "Blaine", "Cahlan"];
+each(names, function(item, indice) {
+  console.log(`The item in the ${indice} position is ${item}`); /// changed the string from using " " to ` `
 });
 
+function each(name, fn) {
+  for (let i = 0; i < name.length; i++) {
+    fn(name[i], i);
+  }
+};
 
 
 
@@ -118,6 +150,17 @@ getUserById('16t', users, function(user){
   console.log('The user with the id 16t has the email of ' + user.email + 'the name of ' + user.name + ' and the address of ' + user.address); 
 });
 
+function getUserById(userId, users, fn) {
+  let user;
+
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id === userId) {
+      user = users[i];
+    }
+  }
+  fn(user);
+}
+
 
 
 
@@ -131,3 +174,11 @@ var numbers  = [1, 2, 3, 4, 5, 6];
 find(numbers, function(num){ 
   return num % 2 == 0; //should return 2
 })
+
+
+
+
+
+
+
+
