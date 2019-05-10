@@ -7,8 +7,15 @@ Write a function that takes an array of integers and returns the sum of the inte
 plusOneSum([1, 2, 3, 4]); // 14
 
 */
+function addOneAndSum(arr) {
+  var count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    count += 1 + arr[i];
+  }
+  return count;
+}
 
-
+addOneAndSum(plusOneSum);
 
 /*
 
@@ -20,6 +27,9 @@ flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
 
 
 
+
+
+
 /*
 
 Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to [a1, b1, c1, a2, b2, c2, ..., aN, bN, cN]
@@ -27,11 +37,21 @@ Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to
 */
 
 
+
+
+
+
+
+
 /*
 
 There is an array of non-negative integers. A second array is formed by shuffling the elements of the first array and deleting a random element. Given these two arrays, find which element is missing in the second array.
 
 */
+
+
+
+
 
 
 
@@ -64,6 +84,8 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 Remove duplicate characters in a given string keeping only the first occurrences. For example, if the input is ‘tree traversal’ the output will be "tre avsl".
 
 */
+
+
 
 
 
