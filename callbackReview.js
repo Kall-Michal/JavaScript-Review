@@ -173,10 +173,16 @@ function getUserById(userId, users, fn) {
 var numbers  = [1, 2, 3, 4, 5, 6];
 find(numbers, function(num){ 
   return num % 2 == 0; //should return 2
-})
+});
 
 
-
+function find(arr, isTruth) {
+  for (var i = 0; i < arr.length; i++) {
+    if (isTruth(arr[i])) {
+      return arr[i];
+    }
+  }
+}
 
 
 

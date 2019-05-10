@@ -73,7 +73,7 @@ var sentence = "Dev Mountain is the best"
 
   //code here
 function longest(str) {
-  var longestWord = str.split(" ").reduce(function(longest, currentWord) {
+  let longestWord = str.split(" ").reduce(function(longest, currentWord) {
     return currentWord.length > longest.length ? currentWord : longest;
   },"");
   return longestWord 
@@ -92,7 +92,7 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
   function capitalize(str) {
     str = str.split(" ");
 
-    for (var i = 0, x = str.length; i < x; i++) {
+    for (let i = 0, x = str.length; i < x; i++) {
       str[i] = str[i][0].toUpperCase() + str[i].substr(1);
     }
 
@@ -110,9 +110,9 @@ var theOdyssey = "function expression or function declaration? Tis an obvious ch
 
 function vowelCounter(str) {
   var vowelList = "aeiouAEIOU";
-  var vowelCount = 0;
+  let vowelCount = 0;
 
-  for (var i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (vowelList.indexOf(str[i]) !== -1) {
       vowelCount += 1;
     }

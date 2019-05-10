@@ -38,8 +38,13 @@ var songs =
 //Write a function that returns the songs array.  This function is acting like a getter.
 
   //code here
+  function getSongs(obj) {
+    /* console.log(obj); */
+    return obj;
+  };
 
-  
+  getSongs(songs);
+
 
 
 //Now write a function that takes in two paramaters.  This function is acting like a setter.
@@ -48,3 +53,14 @@ var songs =
 //Once you do that, call your callback (getter) function which should get the songs and return them.
   
   //code here
+
+function setSong(songIsh, callBack){
+  songs.push(songIsh)
+  return getSongs();
+};
+
+
+
+
+
+

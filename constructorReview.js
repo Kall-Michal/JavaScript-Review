@@ -63,17 +63,15 @@ dog.eat();
   //Yes or no? and why or why not?
 
 
-
-
 /*
   1) What happens when you use the 'new' keyword to call a Constructor function?
-      //should ccreate new instance of the object and inherit the same parameters
+      //****************************************should ccreate new instance of the object and inherit the same parameters
   2) What's a good way to describe the keyword 'this'
-      // reffers to the current object/class/ depends where used, but always point to the very object we are using it in. 
+      // **************************************** reffers to the current object/class/ depends where used, but always point to the very object we are using it in. 
 
   3) Can a normal function which creates an object and then returns that object use the prototype?
-  // not sure.
+    // ****************************************not sure.
 
   4) What happens if you forget to use 'new' when calling a constructor?
-    // Function should be invoked as any other function without "new" key-word.
+    // ****************************************Function should be invoked as any other function without "new" key-word.
 */

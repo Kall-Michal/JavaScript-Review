@@ -37,3 +37,24 @@ function once(fn) {
 /* Once completed, add a second arguments that allows the function to be executed N number of times. After the function has been called N number of times, console.log('STAHHP');
 
 */
+
+function once(fn, num) {
+  var count = 0;
+
+  return function() {
+    if (num <= 0) {
+      console.log("stop");
+    } else {
+      while (count < num) {
+        fn();
+        count++;
+      }
+    }
+  };
+}
+function greeting() {
+  console.log("Hellooo");
+}
+let closure = once(greeting, 4);
+
+closure();
