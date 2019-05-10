@@ -48,11 +48,25 @@ Given an array [a1, a2, ..., aN, b1, b2, ..., bN, c1, c2, ..., cN] convert it to
 There is an array of non-negative integers. A second array is formed by shuffling the elements of the first array and deleting a random element. Given these two arrays, find which element is missing in the second array.
 
 */
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+  function randomize(array) {
+    let shuffleArr = array.sort(() => Math.random() - 0.5);
+    /* console.log(shuffleArr); */
+    return shuffleArr.slice(1);
+  }
+  let globalShuggle = randomize(arr);
 
-
-
-
+  function isMissing(orgArr, shuffArr) {
+    for (var i = 0; i < orgArr.length; i++) {
+      if (shuffArr.indexOf(orgArr[i]) === -1) {
+        return orgArr[i];
+      }
+    }
+  }
+  console.log(arr);
+  console.log(globalShuggle);
+  isMissing(arr, globalShuggle);
 
 
 
